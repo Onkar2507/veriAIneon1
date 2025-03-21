@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriAI - Fact Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">VeriAI - Fact Checker</h1>
+
+        <div class="chat-box">
+            <p class="welcome-message">👋 Welcome! Enter data below to verify its accuracy.</p>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="inputText" placeholder="Enter your text here...">
+            <button onclick="verifyClaim()">Check</button>
+            <label for="fileUpload" class="upload-btn">Upload File</label>
+            <input type="file" id="fileUpload">
+        </div>
+
+        <div id="loading" class="hidden">Processing... ⏳</div>
+
+        <div id="resultBox" class="hidden">
+            <h2>Verification Results</h2>
+
+            <div class="score-container">
+                <div class="score-box truth-score">
+                    <span class="score-label">Truth Score</span>
+                    <span id="truthScore">0%</span>
+                </div>
+                <div class="score-box ai-score">
+                    <span class="score-label">AI-Generated Score</span>
+                    <span id="aiScore">0%</span>
+                </div>
+            </div>
+
+            <h3>Verified Sources</h3>
+            <ul id="sourcesList">
+                <li><a href="https://www.bbc.com" target="_blank">BBC News</a></li>
+                <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+                <li><a href="https://www.factcheck.org" target="_blank">FactCheck.org</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
